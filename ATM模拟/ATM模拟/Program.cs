@@ -1,20 +1,23 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Windows.Forms;
-
-namespace ATM模拟
+﻿namespace ATM模拟
 {
-	static class Program
+	using System;
+	using System.Windows.Forms;
+
+	internal static class Program
 	{
+		#region Methods
+
 		/// <summary>
-		/// 应用程序的主入口点。
+		///     应用程序的主入口点。
 		/// </summary>
 		[STAThread]
-		static void Main()
+		private static void Main()
 		{
 			Application.EnableVisualStyles();
 			Application.SetCompatibleTextRenderingDefault(false);
 			Application.Run(new Form1());
 		}
+
+		#endregion
 	}
 }
