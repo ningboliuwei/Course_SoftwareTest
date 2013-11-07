@@ -3,6 +3,16 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ATM模拟", "ATM模拟\ATM模拟\ATM模拟.csproj", "{18F9C272-AB07-4143-B72F-112650C4CFD1}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "单元测试_NUnit", "单元测试_NUnit", "{F56C86BB-F894-4A7A-BA1B-EE60CADA1C92}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "单元测试_两数相加", "单元测试_两数相加\单元测试_两数相加.csproj", "{181E1A31-4139-47EE-8683-3456BA0589AB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "单元测试_Caculator", "单元测试_Caculator\单元测试_Caculator.csproj", "{3737D5D8-9E12-4ED2-AF49-900F4A2EB44C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "单元测试_寻找最大数", "单元测试_寻找最大数\单元测试_寻找最大数.csproj", "{F15B7064-2B93-48E5-868A-06CB25BFC872}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "单元测试_寻找最大数Test", "单元测试_寻找最大数Test\单元测试_寻找最大数Test.csproj", "{9ADB2F90-A1C1-4C85-9F9F-66AD74A04324}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -13,8 +23,30 @@ Global
 		{18F9C272-AB07-4143-B72F-112650C4CFD1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{18F9C272-AB07-4143-B72F-112650C4CFD1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{18F9C272-AB07-4143-B72F-112650C4CFD1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{181E1A31-4139-47EE-8683-3456BA0589AB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{181E1A31-4139-47EE-8683-3456BA0589AB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{181E1A31-4139-47EE-8683-3456BA0589AB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{181E1A31-4139-47EE-8683-3456BA0589AB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3737D5D8-9E12-4ED2-AF49-900F4A2EB44C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3737D5D8-9E12-4ED2-AF49-900F4A2EB44C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3737D5D8-9E12-4ED2-AF49-900F4A2EB44C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3737D5D8-9E12-4ED2-AF49-900F4A2EB44C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F15B7064-2B93-48E5-868A-06CB25BFC872}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F15B7064-2B93-48E5-868A-06CB25BFC872}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F15B7064-2B93-48E5-868A-06CB25BFC872}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F15B7064-2B93-48E5-868A-06CB25BFC872}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9ADB2F90-A1C1-4C85-9F9F-66AD74A04324}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9ADB2F90-A1C1-4C85-9F9F-66AD74A04324}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9ADB2F90-A1C1-4C85-9F9F-66AD74A04324}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9ADB2F90-A1C1-4C85-9F9F-66AD74A04324}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{181E1A31-4139-47EE-8683-3456BA0589AB} = {F56C86BB-F894-4A7A-BA1B-EE60CADA1C92}
+		{3737D5D8-9E12-4ED2-AF49-900F4A2EB44C} = {F56C86BB-F894-4A7A-BA1B-EE60CADA1C92}
+		{F15B7064-2B93-48E5-868A-06CB25BFC872} = {F56C86BB-F894-4A7A-BA1B-EE60CADA1C92}
+		{9ADB2F90-A1C1-4C85-9F9F-66AD74A04324} = {F56C86BB-F894-4A7A-BA1B-EE60CADA1C92}
 	EndGlobalSection
 EndGlobal
