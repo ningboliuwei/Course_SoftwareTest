@@ -22,18 +22,7 @@ namespace 单元测试_寻找最大数
         }
     }
 
-    //[TestFixture]
-    //class CmpTest
-    //{
-    //    [Test]
-    //    public void LargestOf3()
-    //    {
-    //        Assert.AreEqual(10, Cmp.Largest(new int[] { 8, 9, 10 }));
-    //        Assert.AreEqual(10, Cmp.Largest(new int[] { 9, 9, 10 }));
-    //        Assert.AreEqual(10, Cmp.Largest(new int[] { 9, 10, 9 }));
-    //        Assert.AreEqual(-1, Cmp.Largest(new int[] { -1, -2, -3 }));
-    //        Assert.AreEqual(10, Cmp.Largest(new int[] { 10, 9, 8 }));
-
+   
     [TestFixture]
     internal class TestLargest
     {
