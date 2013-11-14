@@ -15,6 +15,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "集成测试", "集成测�
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "集成测试_SATM", "集成测试_SATM\集成测试_SATM.csproj", "{0EB083A0-726C-436B-8198-B5AF50C2933D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "单元测试_数据库连接", "单元测试_数据库连接\单元测试_数据库连接.csproj", "{30E1F250-6320-4756-AFFC-8B3F17D1A54F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "单元测试_测试驱动开发（IntegerList）_演示", "单元测试_测试驱动开发（IntegerList）_演示\单元测试_测试驱动开发（IntegerList）_演示.csproj", "{1B0D35E5-A7A9-4411-BC28-842C66BE48AE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -41,6 +45,14 @@ Global
 		{0EB083A0-726C-436B-8198-B5AF50C2933D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0EB083A0-726C-436B-8198-B5AF50C2933D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0EB083A0-726C-436B-8198-B5AF50C2933D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{30E1F250-6320-4756-AFFC-8B3F17D1A54F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{30E1F250-6320-4756-AFFC-8B3F17D1A54F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{30E1F250-6320-4756-AFFC-8B3F17D1A54F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{30E1F250-6320-4756-AFFC-8B3F17D1A54F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1B0D35E5-A7A9-4411-BC28-842C66BE48AE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1B0D35E5-A7A9-4411-BC28-842C66BE48AE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1B0D35E5-A7A9-4411-BC28-842C66BE48AE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1B0D35E5-A7A9-4411-BC28-842C66BE48AE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -49,6 +61,8 @@ Global
 		{181E1A31-4139-47EE-8683-3456BA0589AB} = {F56C86BB-F894-4A7A-BA1B-EE60CADA1C92}
 		{3737D5D8-9E12-4ED2-AF49-900F4A2EB44C} = {F56C86BB-F894-4A7A-BA1B-EE60CADA1C92}
 		{F15B7064-2B93-48E5-868A-06CB25BFC872} = {F56C86BB-F894-4A7A-BA1B-EE60CADA1C92}
+		{30E1F250-6320-4756-AFFC-8B3F17D1A54F} = {F56C86BB-F894-4A7A-BA1B-EE60CADA1C92}
+		{1B0D35E5-A7A9-4411-BC28-842C66BE48AE} = {F56C86BB-F894-4A7A-BA1B-EE60CADA1C92}
 		{0EB083A0-726C-436B-8198-B5AF50C2933D} = {2D35133C-F286-4331-BFC5-3C736C87B4E1}
 	EndGlobalSection
 EndGlobal
