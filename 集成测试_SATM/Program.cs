@@ -10,8 +10,8 @@ namespace 集成测试_SATM
 		{
 			Console.WriteLine("Welcome to use SATM...");
 			CentralBankCommunicator communicator = new CentralBankCommunicator();
-			communicator.SendMessage("send message", "10.22.149.99");
-			Console.WriteLine(communicator.GetMessage("10.22.149.99"));
+			communicator.SendMessage("send message", "10.22.149.105");
+			Console.WriteLine(communicator.GetMessage("10.22.149.105"));
 
 			bool sessionIsValid = false;
 			bool deviceIsValid = false;

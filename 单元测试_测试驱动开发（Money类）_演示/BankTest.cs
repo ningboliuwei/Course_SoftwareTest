@@ -6,18 +6,16 @@ using System.Threading.Tasks;
 
 namespace 单元测试_测试驱动开发_Money类__演示
 {
-	class Dollar : Money
-	{
-		public Dollar()
-			: base()
-		{
-			m_currency = "USD";
-		}
+	using NUnit.Framework;
 
-		public Dollar(double amount)
-			: base(amount)
+	[TestFixture]
+	class BankTest
+	{
+		[Test]
+		public void TestGetRate()
 		{
-			m_currency = "USD";
+			Bank bank = new Bank();
+			Assert.AreEqual(0.5, bank.GetRate("CHF", "USD"));
 		}
 	}
 }

@@ -7,13 +7,12 @@ using NUnit.Framework;
 
 namespace 单元测试_测试驱动开发_Money类__演示
 {
-	[TestFixture]
-	class DollarTest
+	class MoneyTest
 	{
 		[Test]
 		public void TestMultiplication()
 		{
-			Dollar five = new Dollar(5);
+			Money five = new Money(5);
 			five.Times(2);
 			Assert.AreEqual(10, five.Amount);
 		}
@@ -21,7 +20,7 @@ namespace 单元测试_测试驱动开发_Money类__演示
 		[Test]
 		public void TestFloatAmount()
 		{
-			Dollar fivePointThree = new Dollar(5.3);
+			Money fivePointThree = new Money(5.3);
 			Assert.AreEqual(5.3, fivePointThree.Amount);
 		}
 
@@ -29,17 +28,20 @@ namespace 单元测试_测试驱动开发_Money类__演示
 		[Test]
 		public void TestEqualsTo()
 		{
-			Dollar five = new Dollar(5);
-			Dollar anotherFive = new Dollar(5);
+			Money five = new Money(5);
+			Money anotherFive = new Money(5);
 
 			Assert.AreEqual(true, five.EqualsTo(anotherFive));
+
 		}
 
 		[Test]
-		public void TestCurrency()
+		public void TestEqualsToBetweenDollarAndFranc()
 		{
-			Dollar five = new Dollar();
-			Assert.AreEqual("USD", five.Currency);
+			Dollar fiveDollar = new Dollar(5);
+			Franc tenFranc = new Franc(10);
+
+			Assert.AreEqual(true, fiveDollar.EqualsTo(tenFranc));
 		}
 	}
 }

@@ -6,18 +6,16 @@ using System.Threading.Tasks;
 
 namespace 单元测试_测试驱动开发_Money类__演示
 {
-	class Dollar : Money
+	class Bank
 	{
-		public Dollar()
-			: base()
+		public double GetRate(string currency, string to)
 		{
-			m_currency = "USD";
-		}
+			if (currency == "CHF" && to == "USD")
+			{
+				return 0.5;
+			}
 
-		public Dollar(double amount)
-			: base(amount)
-		{
-			m_currency = "USD";
+			return -1;
 		}
 	}
 }
