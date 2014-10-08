@@ -1,7 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2012
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ATM模拟", "ATM模拟\ATM模拟\ATM模拟.csproj", "{18F9C272-AB07-4143-B72F-112650C4CFD1}"
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "黑盒测试_ATM模拟", "ATM模拟\ATM模拟\黑盒测试_ATM模拟.csproj", "{18F9C272-AB07-4143-B72F-112650C4CFD1}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "单元测试_NUnit", "单元测试_NUnit", "{F56C86BB-F894-4A7A-BA1B-EE60CADA1C92}"
 EndProject
@@ -20,6 +22,10 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "单元测试_测试驱动开发（IntegerList）_演示", "单元测试_测试驱动开发（IntegerList）_演示\单元测试_测试驱动开发（IntegerList）_演示.csproj", "{1B0D35E5-A7A9-4411-BC28-842C66BE48AE}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "单元测试_测试驱动开发（Money类）_演示", "单元测试_测试驱动开发（Money类）_演示\单元测试_测试驱动开发（Money类）_演示.csproj", "{7F0D17D0-7F71-4594-81B3-E14D2B36312F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "黑盒测试", "黑盒测试", "{A8A55CB9-9269-42AE-8B70-804D6841D037}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "黑盒测试_风阀控制", "黑盒测试_风阀控制\黑盒测试_风阀控制.csproj", "{B690C0D1-F32C-4216-8C37-D72A420F5C36}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -59,6 +65,10 @@ Global
 		{7F0D17D0-7F71-4594-81B3-E14D2B36312F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7F0D17D0-7F71-4594-81B3-E14D2B36312F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7F0D17D0-7F71-4594-81B3-E14D2B36312F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B690C0D1-F32C-4216-8C37-D72A420F5C36}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B690C0D1-F32C-4216-8C37-D72A420F5C36}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B690C0D1-F32C-4216-8C37-D72A420F5C36}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B690C0D1-F32C-4216-8C37-D72A420F5C36}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -71,5 +81,7 @@ Global
 		{1B0D35E5-A7A9-4411-BC28-842C66BE48AE} = {F56C86BB-F894-4A7A-BA1B-EE60CADA1C92}
 		{7F0D17D0-7F71-4594-81B3-E14D2B36312F} = {F56C86BB-F894-4A7A-BA1B-EE60CADA1C92}
 		{0EB083A0-726C-436B-8198-B5AF50C2933D} = {2D35133C-F286-4331-BFC5-3C736C87B4E1}
+		{18F9C272-AB07-4143-B72F-112650C4CFD1} = {A8A55CB9-9269-42AE-8B70-804D6841D037}
+		{B690C0D1-F32C-4216-8C37-D72A420F5C36} = {A8A55CB9-9269-42AE-8B70-804D6841D037}
 	EndGlobalSection
 EndGlobal
