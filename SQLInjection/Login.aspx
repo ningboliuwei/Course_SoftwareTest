@@ -12,6 +12,9 @@
 		<p>用户名:<asp:TextBox ID="txtUsername" runat="server"></asp:TextBox></p>
 		<p>密码:<asp:TextBox ID="txtPassword" runat="server"></asp:TextBox></p>
 		<p><asp:Button ID="btnLogin" runat="server" Text="登录" OnClick="btnLogin_OnClick"/></p>
+        
+        <p><a href="Search.aspx">搜索</a></p>
+        <p><a href="Products.aspx?id=1">显示单件商品</a></p>
     </div>
     </form>
 </body>
