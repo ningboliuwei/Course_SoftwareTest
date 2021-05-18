@@ -1,0 +1,207 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>浏览产品</title>
+    <meta charset="UTF-8"/>
+    <!-- import CSS -->
+    <link href="https://unpkg.com/element-ui/lib/theme-chalk/index.css"
+          rel="stylesheet"/>
+</head>
+<body style="margin: 0;">
+<el-container id="app">
+    <el-main>
+        <el-row>
+            <el-col>
+                <el-menu :default-active="'全部'"
+                         mode="horizontal"
+                         v-on:select="onMenuItemSelect">
+                    <el-menu-item :index="category"
+                                  :key="category"
+                                  v-for="(category, index) in categories">
+                        {{category}}
+                    </el-menu-item>
+                </el-menu>
+            </el-col>
+        </el-row>
+        <el-row>
+            <el-col :span="8"
+                    style="padding: 10px;">
+                <el-button type="primary"
+                           v-on:click="onAddButtonClick">
+                    新增
+                </el-button>
+                <el-button v-bind:icon="order === 'asc' ? 'el-icon-caret-top' : 'el-icon-caret-bottom'"
+                           v-on:click="onOrderButtonClick">
+                    按产品价格{{order==='asc' ? '升' : '降'}}序
+                </el-button>
+            </el-col>
+            <el-col :span="16"
+                    style="padding: 10px;">
+                <el-input :clearable="true"
+                          :span="16"
+                          placeholder="请输入关键字"
+                          v-model="keyword">
+                    <el-button icon="el-icon-search"
+                               slot="append"
+                               v-on:click="onSearchButtonClick">
+                    </el-button>
+                </el-input>
+            </el-col>
+        </el-row>
+        <el-row>
+            <el-col :key="product.id"
+                    :span="8"
+                    style="padding: 10px;"
+                    v-for="product in products">
+                <el-card>
+                    <div slot="header">
+                        <span>{{product.productName}}</span>
+                    </div>
+                    <el-image :src="'/upload/' + product.imgUrl"
+                              fit="contain"
+                              style="height: 200px;">
+                        <div slot="error">
+                            <i class="el-icon-picture-outline"></i>
+                        </div>
+                    </el-image>
+                    <ul>产品序号：{{product.productNumber}}</ul>
+                    <ul>产品类型：{{product.productType}}</ul>
+                    <ul>产品价格：{{product.price}}</ul>
+                    <div style="text-align: right; border-top: #eeeeee solid 1px; padding-top: 20px; padding-bottom: 0">
+                        <el-button icon="el-icon-edit"
+                                   plain
+                                   size="mini"
+                                   v-on:click="onEditButtonClick(product.id)">
+                            编辑
+                        </el-button>
+                        <el-button icon="el-icon-delete"
+                                   plain
+                                   size="mini"
+                                   type="danger"
+                                   v-on:click="onDeleteButtonClick(product.id)">
+                            删除
+                        </el-button>
+                    </div>
+                </el-card>
+            </el-col>
+        </el-row>
+    </el-main>
+</el-container>
+<!-- import Vue before Element -->
+<script src="https://unpkg.com/vue/dist/vue.js"></script>
+<!-- import JavaScript -->
+<script src="https://unpkg.com/element-ui/lib/index.js"></script>
+<script src="https://cdn.bootcdn.net/ajax/libs/axios/0.19.2/axios.js"></script>
+<script>
+    const app = new Vue({
+        el: "#app",
+        data: {
+            // 获取到的所有产品数据放在这里（用于界面元素的绑定）
+            products: [],
+            keyword: '',
+            order: 'asc',
+            categories: ['全部', '电器', '数码', '食品']
+        },
+        methods: {
+            async GetAllProducts(order) {
+                // 获取所有产品数据
+                let response = await axios.get('/Product/GetAll', { params: { order: order } });
+
+                if (response.data.code === 'success') {
+                    this.products = response.data.data;
+                } else {
+                    this.$message({
+                        message: '记录获取失败',
+                        type: 'error'
+                    });
+                }
+            },
+            onAddButtonClick() {
+                window.location.href = "/Product/Create";
+            },
+            onEditButtonClick(id) {
+                window.location.href = "/Product/Edit/" + id;
+            },
+            onDeleteButtonClick(id) {
+                this.$confirm('确认删除该产品吗？',
+                        '提示',
+                        {
+                            confirmButtonText: '确定',
+                            cancelButtonText: '取消',
+                            type: 'warning'
+                        })
+                    .then(async () => {
+                        await this.deleteProduct(id);
+                    })
+                    .catch(() => {});;
+            },
+            async deleteProduct(id) {
+                let response = await axios.get('/Product/Delete/', { params: { id: id } });
+
+                if (response.data.code === 'success') {
+                    this.$message({
+                        type: 'success',
+                        message: '删除记录成功!'
+                    });
+                    // 删除产品记录后刷新数据
+                    this.GetAllProducts(this.order);
+                } else {
+                    this.$message({
+                        message: '删除记录失败',
+                        type: 'error'
+                    });
+                }
+            },
+            async onSearchButtonClick() {
+                if (this.keyword === '') {
+                    this.GetAllProducts(this.order);
+                } else {
+                    this.GetAllProductsByKeyword(this.keyword);
+                }
+            },
+            async GetAllProductsByKeyword(keyword) {
+                // 获取所有产品数据
+                let response = await axios.get('/Product/GetProductsByKeyword', { params: { keyword: keyword } });
+
+                if (response.data.code === 'success') {
+                    this.products = response.data.data;
+                }
+            },
+            onOrderButtonClick() {
+                if (this.order === 'asc') {
+                    this.order = 'desc';
+                } else {
+                    this.order = 'asc';
+                }
+
+                this.GetAllProducts(this.order);
+            },
+            async GetAllProductsByCategory(category) {
+                // 获取所有产品数据
+                let response = await axios.get('/Product/GetProductsByCategory', { params: { category: category } });
+
+                if (response.data.code === 'success') {
+                    this.products = response.data.data;
+                }
+            },
+            onMenuItemSelect(index) {
+                if (index === '全部') {
+                    this.GetAllProducts(this.order);
+                } else {
+                    this.GetAllProductsByCategory(index);
+                }
+            }
+        },
+        mounted() {
+            this.GetAllProducts(this.order);
+        }
+    });
+</script>
+</body>
+
+</html>

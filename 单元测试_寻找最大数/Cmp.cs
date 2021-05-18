@@ -1,5 +1,5 @@
 using System;
-
+using System.ComponentModel;
 using NUnit.Framework;
 
 namespace 单元测试_寻找最大数
@@ -55,15 +55,15 @@ namespace 单元测试_寻找最大数
         //}
 
         [Test]
-        [Category("simple")]
-        [ExpectedException(typeof(DivideByZeroException))]
+        // [Category("simple")]
+        // [ExpectedException(typeof(DivideByZeroException))]
         public void TestOne()
         {
             Assert.AreEqual(1, Cmp.Largest(new int[] { 1 }));
         }
 
         [Test]
-        [Category("simple")]
+        // [Category("simple")]
         public void TestNegative()
         {
             Assert.AreEqual(-7, Cmp.Largest(new int[] { -9, -8, -7 }));

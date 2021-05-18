@@ -2,8 +2,6 @@
 using System.Collections.Generic;
 using System.Text;
 
-using NUnit.Framework;
-
 namespace 单元测试_两数相加
 {
     public class Caculator
@@ -64,16 +62,6 @@ namespace 单元测试_两数相加
             }
 
             return array;
-        }
-
-        [TestFixture]
-        private class CaculatorTest
-        {
-            [Test]
-            public void BubbleSortTest()
-            {
-                Assert.AreSame(new int[] { 3, 4, 5 }, (new Caculator().BubbleSort(new int[] { 3, 5, 4 })));
-            }
         }
     }
 }

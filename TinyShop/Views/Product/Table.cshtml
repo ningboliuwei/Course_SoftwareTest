@@ -1,0 +1,105 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>产品数据表</title>
+    <meta charset="UTF-8"/>
+    <!-- import CSS -->
+    <link href="https://unpkg.com/element-ui/lib/theme-chalk/index.css"
+          rel="stylesheet"/>
+</head>
+<body style="margin: 0;">
+<el-container id="app">
+    <el-main>
+        <el-row>
+            <el-col>
+                <el-table :border="true"
+                          :data="products"
+                          style="width: 100%">
+                    <el-table-column :sortable="true"
+                                     header-align="center"
+                                     label="产品编号"
+                                     prop="productNumber">
+                    </el-table-column>
+                    <el-table-column :sortable="true"
+                                     header-align="center"
+                                     label="产品名称"
+                                     prop="productName">
+                    </el-table-column>
+                    <el-table-column :sortable="true"
+                                     header-align="center"
+                                     label="产品类型"
+                                     prop="productType">
+                    </el-table-column>
+                    <el-table-column :sortable="true"
+                                     align="right"
+                                     header-align="center"
+                                     label="价格"
+                                     prop="price">
+                    </el-table-column>
+                    <el-table-column align="center"
+                                     header-align="center"
+                                     label="操作">
+                        <template slot-scope="scope">
+                            <el-button size="mini"
+                                       v-on:click="onEditButtonClick(scope.row.id)">
+                                编辑
+                            </el-button>
+                            <el-button size="mini"
+                                       type="danger"
+                                       v-on:click="onDeleteButtonClick(scope.row.id)">
+                                删除
+                            </el-button>
+                        </template>
+                    </el-table-column>
+                </el-table>
+            </el-col>
+        </el-row>
+    </el-main>
+</el-container>
+<!-- import Vue before Element -->
+<script src="https://unpkg.com/vue/dist/vue.js"></script>
+<!-- import JavaScript -->
+<script src="https://unpkg.com/element-ui/lib/index.js"></script>
+<script src="https://cdn.bootcdn.net/ajax/libs/axios/0.19.2/axios.js"></script>
+<script>
+    const app = new Vue({
+        el: "#app",
+        data: {
+            products: []
+        },
+        methods: {
+            async GetAllProducts(order) {
+                // 获取所有产品数据
+                let response = await axios.get('/Product/GetAll', { params: { order: order } });
+
+                if (response.data.code === 'success') {
+                    this.products = response.data.data;
+                } else {
+                    this.$message({
+                        message: '记录获取失败',
+                        type: 'error'
+                    });
+                }
+            },
+            onEditButtonClick(id) {
+                console.log(id);
+            },
+            onDeleteButtonClick(id) {
+                console.log(id);
+            }
+        },
+        mounted() {
+            this.GetAllProducts('desc');
+        }
+
+    });
+</script>
+</body>
+
+</html>

@@ -12,14 +12,14 @@ namespace 单元测试_数据库连接
 	{
 		private SqlConnection connection;
 
-		[TestFixtureSetUp]//Setup
+		// [TestFixtureSetUp]//Setup
 		public void InitializeDBConnection()
 		{
 			connection = new SqlConnection("data source=127.0.0.1;database=schooldb;uid=Student;pwd=123456");
 			connection.Open();
 		}
 
-		[TestFixtureTearDown]//TearDown
+		// [TestFixtureTearDown]//TearDown
 		public void FinalizeDBConnection()
 		{
 			//connection.Close();

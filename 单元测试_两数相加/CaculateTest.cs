@@ -37,7 +37,7 @@ namespace 单元测试_两数相加
         }
 
         [Test]
-        [ExpectedException(typeof(DivideByZeroException))]
+        // [ExpectedException(typeof(DivideByZeroException))]
         public void DivideTwoNumbers()
         {
             Assert.AreEqual(3, caculate.DivideTwoNumbers(4,0));

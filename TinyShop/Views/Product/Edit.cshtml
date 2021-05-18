@@ -1,0 +1,155 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>添加产品</title>
+    <meta charset="UTF-8"/>
+    <!-- import CSS -->
+    <link href="https://unpkg.com/element-ui/lib/theme-chalk/index.css"
+          rel="stylesheet"/>
+</head>
+<body style="margin: 0;">
+<el-container id="app">
+    <el-main>
+        <el-row>
+            <el-col>
+                <el-form :model="product"
+                         label-width="auto"
+                         ref="form">
+                    <el-row>
+                        <el-col>
+                            <el-form-item label="产品序号">
+                                <el-input :disabled="true"
+                                          placeholder="请输入产品序号"
+                                          v-model="product.productNumber">
+                                </el-input>
+                            </el-form-item>
+                        </el-col>
+                    </el-row>
+                    <el-row>
+                        <el-col>
+                            <el-form-item label="产品名称">
+                                <el-input placeholder="请输入产品名称"
+                                          v-model="product.productName">
+                                </el-input>
+                            </el-form-item>
+                        </el-col>
+                    </el-row>
+                    <el-row>
+                        <el-col>
+                            <el-form-item label="产品类型">
+                                <el-radio-group v-model="product.productType">
+                                    <el-radio label="电器"></el-radio>
+                                    <el-radio label="数码"></el-radio>
+                                    <el-radio label="食品"></el-radio>
+                                </el-radio-group>
+                            </el-form-item>
+                        </el-col>
+                    </el-row>
+                    <el-row>
+                        <el-col>
+                            <el-form-item label="价格">
+                                <el-input placeholder="请输入价格"
+                                          v-model="product.price">
+                                </el-input>
+                            </el-form-item>
+                        </el-col>
+                    </el-row>
+                    <el-row>
+                        <el-col>
+                            <el-form-item label="上传图片">
+                                <el-upload :on-success="onPictureUploadSuccess"
+                                           :show-file-list="false"
+                                           action="/Product/UploadImage">
+                                    <el-button>
+                                        选择文件
+                                    </el-button>
+                                </el-upload>
+                                <el-image :src="'/upload/' + product.imgUrl"
+                                          fit="contain"
+                                          style="height: 300px;">
+                                    <div slot="error">
+                                        <i class="el-icon-picture-outline"></i>
+                                    </div>
+                                </el-image>
+                            </el-form-item>
+                        </el-col>
+                    </el-row>
+                    <el-row>
+                        <el-col style="text-align: center;">
+                            <el-form-item>
+                                <el-button type="primary"
+                                           v-on:click="onOKButtonClick">
+                                    确定
+                                </el-button>
+                                <el-button v-on:click="onBackButtonClick">返回</el-button>
+                            </el-form-item>
+                        </el-col>
+                    </el-row>
+                </el-form>
+            </el-col>
+        </el-row>
+    </el-main>
+</el-container>
+<!-- import Vue before Element -->
+<script src="https://unpkg.com/vue/dist/vue.js"></script>
+<!-- import JavaScript -->
+<script src="https://unpkg.com/element-ui/lib/index.js"></script>
+<script src="https://cdn.bootcdn.net/ajax/libs/axios/0.19.2/axios.js"></script>
+<script>
+    const app = new Vue({
+        el: "#app",
+        data: {
+            product: {}
+        },
+        methods: {
+            async onOKButtonClick() {
+                this.updateProduct();
+            },
+            onBackButtonClick() {
+                window.location.href = "/Product/Index";
+            },
+            async updateProduct() {
+                let response = await axios.post('/Product/Update', this.product);
+
+                if (response.data.code === 'success') {
+                    this.$message({
+                        message: '记录修改成功',
+                        type: 'success'
+                    });
+
+                    this.onBackButtonClick();
+                } else {
+                    this.$message({
+                        message: '记录修改失败',
+                        type: 'error'
+                    });
+                }
+            },
+            async getProductById(id) {
+                let response = await axios.get('/Product/GetProductById', { params: { id: id } });
+
+                if (response.data.code === 'success') {
+                    this.product = response.data.data;
+                    // 用于将数值型的价格准换为字符串型的价格（用于在页面展示数据，对应的是 ProductVO）
+                    this.product.price = this.product.price.toString();
+                }
+            },
+            onPictureUploadSuccess: function(response, file, fileList) {
+                if (response.code === "success") {
+                    this.product.imgUrl = response.data;
+                } else {
+                    this.$message({
+                        message: '图片上传失败',
+                        type: 'error'
+                    });
+                }
+            }
+        },
+        mounted() {
+            this.getProductById(@ViewBag.Id);
+        }
+    });
+</script>
+</body>
+
+</html>
