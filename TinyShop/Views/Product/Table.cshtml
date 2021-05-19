@@ -10,7 +10,7 @@
     <title>产品数据表</title>
     <meta charset="UTF-8"/>
     <!-- import CSS -->
-    <link href="https://unpkg.com/element-ui/lib/theme-chalk/index.css"
+    <link href="~/lib/element-ui/css/themes/default/index.css"
           rel="stylesheet"/>
 </head>
 <body style="margin: 0;">
@@ -63,10 +63,10 @@
     </el-main>
 </el-container>
 <!-- import Vue before Element -->
-<script src="https://unpkg.com/vue/dist/vue.js"></script>
+<script src="~/lib/vue/js/vue.js"></script>
 <!-- import JavaScript -->
-<script src="https://unpkg.com/element-ui/lib/index.js"></script>
-<script src="https://cdn.bootcdn.net/ajax/libs/axios/0.19.2/axios.js"></script>
+<script src="~/lib/element-ui/js/index.js"></script>
+<script src="~/lib/axios/js/axios.min.js"></script>
 <script>
     const app = new Vue({
         el: "#app",
@@ -101,5 +101,4 @@
     });
 </script>
 </body>
-
 </html>
