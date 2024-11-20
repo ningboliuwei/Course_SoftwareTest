@@ -1,17 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿#region
+
+using System;
 using NUnit.Framework;
 
-namespace 上课演示_2020_Fall
-{
-    [TestFixture]
-    public class CalculatorTest
-    {
-        private Calculator _calculator;
+#endregion
 
+namespace 上课演示_2020_Fall {
+    [TestFixture]
+    public class CalculatorTest {
         [OneTimeSetUp]
         public void OneTimeSetUp() {
         }
@@ -29,6 +25,7 @@ namespace 上课演示_2020_Fall
         public void OneTimeTearDown() {
         }
 
+        private Calculator _calculator;
 
         [Test]
         public void AddTest() {

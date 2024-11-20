@@ -1,36 +1,30 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using NUnit.Framework;
+﻿#region
+
 using System.Data.SqlClient;
+using NUnit.Framework;
 
-namespace 单元测试_数据库连接
-{
-	[TestFixture]
-	class DBHelperTest
-	{
-		private SqlConnection connection;
+#endregion
 
-		// [TestFixtureSetUp]//Setup
-		public void InitializeDBConnection()
-		{
-			connection = new SqlConnection("data source=127.0.0.1;database=schooldb;uid=Student;pwd=123456");
-			connection.Open();
-		}
+namespace 单元测试_数据库连接 {
+    [TestFixture]
+    internal class DBHelperTest {
+        private SqlConnection connection;
 
-		// [TestFixtureTearDown]//TearDown
-		public void FinalizeDBConnection()
-		{
-			//connection.Close();
-			//connection = null;
-		}
+        // [TestFixtureSetUp]//Setup
+        public void InitializeDBConnection() {
+            connection = new SqlConnection("data source=127.0.0.1;database=schooldb;uid=Student;pwd=123456");
+            connection.Open();
+        }
 
-		[Test]
-		public void TestScalar()
-		{
-			Assert.AreEqual(6, DBHelper.ExecuteScalar(connection, "SELECT COUNT(*) FROM Students"));
-			
-		}
-	}
+        // [TestFixtureTearDown]//TearDown
+        public void FinalizeDBConnection() {
+            //connection.Close();
+            //connection = null;
+        }
+
+        [Test]
+        public void TestScalar() {
+            Assert.AreEqual(6, DBHelper.ExecuteScalar(connection, "SELECT COUNT(*) FROM Students"));
+        }
+    }
 }

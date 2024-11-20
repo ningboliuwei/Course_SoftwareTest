@@ -1,28 +1,23 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿#region
 
-namespace 单元测试_Caculator
-{
-    class Program
-    {
-        private static void Main(string[] args)
-        {
-            Caculator cal = new Caculator();
+using System;
 
-            int result = cal.Add(1, 3);
+#endregion
+
+namespace 单元测试_Calculator {
+    internal class Program {
+        private static void Main(string[] args) {
+            var cal = new Calculator();
+
+            var result = cal.Add(1, 3);
 
             Console.WriteLine(result);
 
+            int[] array = { 3, 2, 5, 7, 9 };
+            var resultArray = cal.BubbleSort(array);
 
-            int[] array = new int[] {3, 2, 5, 7, 9};
-            int[] resultArray ; 
-            resultArray= cal.BubbleSort(array);
-
-            for(int i = 0; i < resultArray.Length;i++)
-            {
-               Console.Write(resultArray[i] + ",");
+            for (var i = 0; i < resultArray.Length; i++) {
+                Console.Write(resultArray[i] + ",");
             }
 
             Console.Read();

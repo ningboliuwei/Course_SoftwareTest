@@ -1,0 +1,28 @@
+{
+  "ServerUri": "http://localhost:9000",
+  "Organization": null,
+  "ProjectKey": "TinyShop",
+  "ProjectName": "TinyShop",
+  "Profiles": {
+    "CSharp": {
+      "ProfileKey": "AYhRNq_704ZsvKi7cnrc",
+      "ProfileTimestamp": "2023-05-25T04:41:58Z"
+    },
+    "Secrets": {
+      "ProfileKey": "AYhRNq8m04ZsvKi7cngG",
+      "ProfileTimestamp": "2023-05-25T04:41:58Z"
+    },
+    "Js": {
+      "ProfileKey": "AYhRNq4-04ZsvKi7cnTb",
+      "ProfileTimestamp": "2023-05-25T04:41:58Z"
+    },
+    "Ts": {
+      "ProfileKey": "AYhRNrQo04ZsvKi7coll",
+      "ProfileTimestamp": "2023-05-25T04:41:59Z"
+    },
+    "Css": {
+      "ProfileKey": "AYhRNqze04ZsvKi7cnET",
+      "ProfileTimestamp": "2023-05-25T04:41:57Z"
+    }
+  }
+}

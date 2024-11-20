@@ -1,53 +1,32 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿#region
 
-namespace 单元测试_两数相加
-{
-    public class Caculator
-    {
-        public int Add(int a, int b)
-        {
+using System;
+
+#endregion
+
+namespace 单元测试_两数相加 {
+    public class Caculator {
+        public int Add(int a, int b) {
             return a + b;
-        }
-
-        public int Minus(int a, int b)
-        {
-            return a - b;
-        }
-
-        public int Multiply(int a, int b)
-        {
-            return a * b;
-        }
-
-        public int Divide(int a, int b)
-        {
-            return a / b;
         }
 
         /*
          * Bubble Sort
          */
 
-        public int[] BubbleSort(int[] array)
-        {
-            if (null == array)
-            {
+        public int[] BubbleSort(int[] array) {
+            if (null == array) {
                 Console.Error.WriteLine("parameter shouldn't be null!");
 
                 return new int[] { };
             }
 
-            for (int i = 0; i < array.Length - 1; ++i)
-            {
-                bool swap = false;
+            for (var i = 0; i < array.Length - 1; ++i) {
+                var swap = false;
 
-                for (int j = 1; j < array.Length - i - 1; ++j)
-                {
-                    if (array[j] > array[j + 1])
-                    {
-                        int temp = array[j];
+                for (var j = 1; j < array.Length - i - 1; ++j) {
+                    if (array[j] > array[j + 1]) {
+                        var temp = array[j];
                         array[j] = array[j + 1];
                         array[j + 1] = temp;
 
@@ -55,13 +34,24 @@ namespace 单元测试_两数相加
                     }
                 }
 
-                if (!swap)
-                {
+                if (!swap) {
                     return array;
                 }
             }
 
             return array;
+        }
+
+        public int Divide(int a, int b) {
+            return a / b;
+        }
+
+        public int Minus(int a, int b) {
+            return a - b;
+        }
+
+        public int Multiply(int a, int b) {
+            return a * b;
         }
     }
 }

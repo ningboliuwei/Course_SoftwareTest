@@ -1,0 +1,623 @@
+{
+  "$schema": "http://json.schemastore.org/sarif-1.0.0",
+  "version": "1.0.0",
+  "runs": [
+    {
+      "tool": {
+        "name": "Microsoft(R) Visual C# 编译器",
+        "version": "4.4.0.0",
+        "fileVersion": "4.4.0-4.22520.11 (9e075f03)",
+        "semanticVersion": "4.4.0",
+        "language": "zh-CN"
+      },
+      "results": [
+        {
+          "ruleId": "CS1998",
+          "level": "warning",
+          "message": "此异步方法缺少 \"await\" 运算符，将以同步方式运行。请考虑使用 \"await\" 运算符等待非阻止的 API 调用，或者使用 \"await Task.Run(...)\" 在后台线程上执行占用大量 CPU 的工作。",
+          "suppressionStates": [
+            "suppressedInSource"
+          ],
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/GitHub/Course_SoftwareTest/TinyShop/obj/Debug/netcoreapp3.1/Razor/Views/Shared/_Layout.cshtml.g.cs",
+                "region": {
+                  "startLine": 29,
+                  "startColumn": 67,
+                  "endLine": 29,
+                  "endColumn": 79
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS1998",
+          "level": "warning",
+          "message": "此异步方法缺少 \"await\" 运算符，将以同步方式运行。请考虑使用 \"await\" 运算符等待非阻止的 API 调用，或者使用 \"await Task.Run(...)\" 在后台线程上执行占用大量 CPU 的工作。",
+          "suppressionStates": [
+            "suppressedInSource"
+          ],
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/GitHub/Course_SoftwareTest/TinyShop/obj/Debug/netcoreapp3.1/Razor/Views/Home/Index.cshtml.g.cs",
+                "region": {
+                  "startLine": 29,
+                  "startColumn": 67,
+                  "endLine": 29,
+                  "endColumn": 79
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS1998",
+          "level": "warning",
+          "message": "此异步方法缺少 \"await\" 运算符，将以同步方式运行。请考虑使用 \"await\" 运算符等待非阻止的 API 调用，或者使用 \"await Task.Run(...)\" 在后台线程上执行占用大量 CPU 的工作。",
+          "suppressionStates": [
+            "suppressedInSource"
+          ],
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/GitHub/Course_SoftwareTest/TinyShop/obj/Debug/netcoreapp3.1/Razor/Views/_ViewStart.cshtml.g.cs",
+                "region": {
+                  "startLine": 29,
+                  "startColumn": 67,
+                  "endLine": 29,
+                  "endColumn": 79
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS1998",
+          "level": "warning",
+          "message": "此异步方法缺少 \"await\" 运算符，将以同步方式运行。请考虑使用 \"await\" 运算符等待非阻止的 API 调用，或者使用 \"await Task.Run(...)\" 在后台线程上执行占用大量 CPU 的工作。",
+          "suppressionStates": [
+            "suppressedInSource"
+          ],
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/GitHub/Course_SoftwareTest/TinyShop/obj/Debug/netcoreapp3.1/Razor/Views/_ViewImports.cshtml.g.cs",
+                "region": {
+                  "startLine": 28,
+                  "startColumn": 67,
+                  "endLine": 28,
+                  "endColumn": 79
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS1998",
+          "level": "warning",
+          "message": "此异步方法缺少 \"await\" 运算符，将以同步方式运行。请考虑使用 \"await\" 运算符等待非阻止的 API 调用，或者使用 \"await Task.Run(...)\" 在后台线程上执行占用大量 CPU 的工作。",
+          "suppressionStates": [
+            "suppressedInSource"
+          ],
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/GitHub/Course_SoftwareTest/TinyShop/obj/Debug/netcoreapp3.1/Razor/Views/Product/Table.cshtml.g.cs",
+                "region": {
+                  "startLine": 63,
+                  "startColumn": 208,
+                  "endLine": 63,
+                  "endColumn": 210
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS1998",
+          "level": "warning",
+          "message": "此异步方法缺少 \"await\" 运算符，将以同步方式运行。请考虑使用 \"await\" 运算符等待非阻止的 API 调用，或者使用 \"await Task.Run(...)\" 在后台线程上执行占用大量 CPU 的工作。",
+          "suppressionStates": [
+            "suppressedInSource"
+          ],
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/GitHub/Course_SoftwareTest/TinyShop/obj/Debug/netcoreapp3.1/Razor/Views/Product/Create.cshtml.g.cs",
+                "region": {
+                  "startLine": 63,
+                  "startColumn": 208,
+                  "endLine": 63,
+                  "endColumn": 210
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS1998",
+          "level": "warning",
+          "message": "此异步方法缺少 \"await\" 运算符，将以同步方式运行。请考虑使用 \"await\" 运算符等待非阻止的 API 调用，或者使用 \"await Task.Run(...)\" 在后台线程上执行占用大量 CPU 的工作。",
+          "suppressionStates": [
+            "suppressedInSource"
+          ],
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/GitHub/Course_SoftwareTest/TinyShop/obj/Debug/netcoreapp3.1/Razor/Views/Product/Table.cshtml.g.cs",
+                "region": {
+                  "startLine": 136,
+                  "startColumn": 217,
+                  "endLine": 136,
+                  "endColumn": 219
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS1998",
+          "level": "warning",
+          "message": "此异步方法缺少 \"await\" 运算符，将以同步方式运行。请考虑使用 \"await\" 运算符等待非阻止的 API 调用，或者使用 \"await Task.Run(...)\" 在后台线程上执行占用大量 CPU 的工作。",
+          "suppressionStates": [
+            "suppressedInSource"
+          ],
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/GitHub/Course_SoftwareTest/TinyShop/obj/Debug/netcoreapp3.1/Razor/Views/Product/Create.cshtml.g.cs",
+                "region": {
+                  "startLine": 180,
+                  "startColumn": 217,
+                  "endLine": 180,
+                  "endColumn": 219
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS1998",
+          "level": "warning",
+          "message": "此异步方法缺少 \"await\" 运算符，将以同步方式运行。请考虑使用 \"await\" 运算符等待非阻止的 API 调用，或者使用 \"await Task.Run(...)\" 在后台线程上执行占用大量 CPU 的工作。",
+          "suppressionStates": [
+            "suppressedInSource"
+          ],
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/GitHub/Course_SoftwareTest/TinyShop/obj/Debug/netcoreapp3.1/Razor/Views/Product/Create.cshtml.g.cs",
+                "region": {
+                  "startLine": 194,
+                  "startColumn": 217,
+                  "endLine": 194,
+                  "endColumn": 219
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS1998",
+          "level": "warning",
+          "message": "此异步方法缺少 \"await\" 运算符，将以同步方式运行。请考虑使用 \"await\" 运算符等待非阻止的 API 调用，或者使用 \"await Task.Run(...)\" 在后台线程上执行占用大量 CPU 的工作。",
+          "suppressionStates": [
+            "suppressedInSource"
+          ],
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/GitHub/Course_SoftwareTest/TinyShop/obj/Debug/netcoreapp3.1/Razor/Views/Product/Table.cshtml.g.cs",
+                "region": {
+                  "startLine": 150,
+                  "startColumn": 217,
+                  "endLine": 150,
+                  "endColumn": 219
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS1998",
+          "level": "warning",
+          "message": "此异步方法缺少 \"await\" 运算符，将以同步方式运行。请考虑使用 \"await\" 运算符等待非阻止的 API 调用，或者使用 \"await Task.Run(...)\" 在后台线程上执行占用大量 CPU 的工作。",
+          "suppressionStates": [
+            "suppressedInSource"
+          ],
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/GitHub/Course_SoftwareTest/TinyShop/obj/Debug/netcoreapp3.1/Razor/Views/Product/Table.cshtml.g.cs",
+                "region": {
+                  "startLine": 164,
+                  "startColumn": 217,
+                  "endLine": 164,
+                  "endColumn": 219
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS1998",
+          "level": "warning",
+          "message": "此异步方法缺少 \"await\" 运算符，将以同步方式运行。请考虑使用 \"await\" 运算符等待非阻止的 API 调用，或者使用 \"await Task.Run(...)\" 在后台线程上执行占用大量 CPU 的工作。",
+          "suppressionStates": [
+            "suppressedInSource"
+          ],
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/GitHub/Course_SoftwareTest/TinyShop/obj/Debug/netcoreapp3.1/Razor/Views/Product/Create.cshtml.g.cs",
+                "region": {
+                  "startLine": 208,
+                  "startColumn": 217,
+                  "endLine": 208,
+                  "endColumn": 219
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS1998",
+          "level": "warning",
+          "message": "此异步方法缺少 \"await\" 运算符，将以同步方式运行。请考虑使用 \"await\" 运算符等待非阻止的 API 调用，或者使用 \"await Task.Run(...)\" 在后台线程上执行占用大量 CPU 的工作。",
+          "suppressionStates": [
+            "suppressedInSource"
+          ],
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/GitHub/Course_SoftwareTest/TinyShop/obj/Debug/netcoreapp3.1/Razor/Views/Product/Index.cshtml.g.cs",
+                "region": {
+                  "startLine": 63,
+                  "startColumn": 208,
+                  "endLine": 63,
+                  "endColumn": 210
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS1998",
+          "level": "warning",
+          "message": "此异步方法缺少 \"await\" 运算符，将以同步方式运行。请考虑使用 \"await\" 运算符等待非阻止的 API 调用，或者使用 \"await Task.Run(...)\" 在后台线程上执行占用大量 CPU 的工作。",
+          "suppressionStates": [
+            "suppressedInSource"
+          ],
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/GitHub/Course_SoftwareTest/TinyShop/obj/Debug/netcoreapp3.1/Razor/Views/Product/Index.cshtml.g.cs",
+                "region": {
+                  "startLine": 176,
+                  "startColumn": 217,
+                  "endLine": 176,
+                  "endColumn": 219
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS1998",
+          "level": "warning",
+          "message": "此异步方法缺少 \"await\" 运算符，将以同步方式运行。请考虑使用 \"await\" 运算符等待非阻止的 API 调用，或者使用 \"await Task.Run(...)\" 在后台线程上执行占用大量 CPU 的工作。",
+          "suppressionStates": [
+            "suppressedInSource"
+          ],
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/GitHub/Course_SoftwareTest/TinyShop/obj/Debug/netcoreapp3.1/Razor/Views/Product/Index.cshtml.g.cs",
+                "region": {
+                  "startLine": 190,
+                  "startColumn": 217,
+                  "endLine": 190,
+                  "endColumn": 219
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS1998",
+          "level": "warning",
+          "message": "此异步方法缺少 \"await\" 运算符，将以同步方式运行。请考虑使用 \"await\" 运算符等待非阻止的 API 调用，或者使用 \"await Task.Run(...)\" 在后台线程上执行占用大量 CPU 的工作。",
+          "suppressionStates": [
+            "suppressedInSource"
+          ],
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/GitHub/Course_SoftwareTest/TinyShop/obj/Debug/netcoreapp3.1/Razor/Views/Product/Index.cshtml.g.cs",
+                "region": {
+                  "startLine": 204,
+                  "startColumn": 217,
+                  "endLine": 204,
+                  "endColumn": 219
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS1998",
+          "level": "warning",
+          "message": "此异步方法缺少 \"await\" 运算符，将以同步方式运行。请考虑使用 \"await\" 运算符等待非阻止的 API 调用，或者使用 \"await Task.Run(...)\" 在后台线程上执行占用大量 CPU 的工作。",
+          "suppressionStates": [
+            "suppressedInSource"
+          ],
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/GitHub/Course_SoftwareTest/TinyShop/obj/Debug/netcoreapp3.1/Razor/Views/Product/Edit.cshtml.g.cs",
+                "region": {
+                  "startLine": 63,
+                  "startColumn": 208,
+                  "endLine": 63,
+                  "endColumn": 210
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS1998",
+          "level": "warning",
+          "message": "此异步方法缺少 \"await\" 运算符，将以同步方式运行。请考虑使用 \"await\" 运算符等待非阻止的 API 调用，或者使用 \"await Task.Run(...)\" 在后台线程上执行占用大量 CPU 的工作。",
+          "suppressionStates": [
+            "suppressedInSource"
+          ],
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/GitHub/Course_SoftwareTest/TinyShop/obj/Debug/netcoreapp3.1/Razor/Views/Product/Edit.cshtml.g.cs",
+                "region": {
+                  "startLine": 179,
+                  "startColumn": 217,
+                  "endLine": 179,
+                  "endColumn": 219
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS1998",
+          "level": "warning",
+          "message": "此异步方法缺少 \"await\" 运算符，将以同步方式运行。请考虑使用 \"await\" 运算符等待非阻止的 API 调用，或者使用 \"await Task.Run(...)\" 在后台线程上执行占用大量 CPU 的工作。",
+          "suppressionStates": [
+            "suppressedInSource"
+          ],
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/GitHub/Course_SoftwareTest/TinyShop/obj/Debug/netcoreapp3.1/Razor/Views/Product/Edit.cshtml.g.cs",
+                "region": {
+                  "startLine": 193,
+                  "startColumn": 217,
+                  "endLine": 193,
+                  "endColumn": 219
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS1998",
+          "level": "warning",
+          "message": "此异步方法缺少 \"await\" 运算符，将以同步方式运行。请考虑使用 \"await\" 运算符等待非阻止的 API 调用，或者使用 \"await Task.Run(...)\" 在后台线程上执行占用大量 CPU 的工作。",
+          "suppressionStates": [
+            "suppressedInSource"
+          ],
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/GitHub/Course_SoftwareTest/TinyShop/obj/Debug/netcoreapp3.1/Razor/Views/Product/Edit.cshtml.g.cs",
+                "region": {
+                  "startLine": 207,
+                  "startColumn": 217,
+                  "endLine": 207,
+                  "endColumn": 219
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS0169",
+          "level": "warning",
+          "message": "从不使用字段“Views_Product_Create.__tagHelperStringValueBuffer”",
+          "suppressionStates": [
+            "suppressedInSource"
+          ],
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/GitHub/Course_SoftwareTest/TinyShop/obj/Debug/netcoreapp3.1/Razor/Views/Product/Create.cshtml.g.cs",
+                "region": {
+                  "startLine": 40,
+                  "startColumn": 24,
+                  "endLine": 40,
+                  "endColumn": 52
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 3
+          }
+        },
+        {
+          "ruleId": "CS0169",
+          "level": "warning",
+          "message": "从不使用字段“Views_Product_Edit.__tagHelperStringValueBuffer”",
+          "suppressionStates": [
+            "suppressedInSource"
+          ],
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/GitHub/Course_SoftwareTest/TinyShop/obj/Debug/netcoreapp3.1/Razor/Views/Product/Edit.cshtml.g.cs",
+                "region": {
+                  "startLine": 40,
+                  "startColumn": 24,
+                  "endLine": 40,
+                  "endColumn": 52
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 3
+          }
+        },
+        {
+          "ruleId": "CS0169",
+          "level": "warning",
+          "message": "从不使用字段“Views_Product_Table.__tagHelperStringValueBuffer”",
+          "suppressionStates": [
+            "suppressedInSource"
+          ],
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/GitHub/Course_SoftwareTest/TinyShop/obj/Debug/netcoreapp3.1/Razor/Views/Product/Table.cshtml.g.cs",
+                "region": {
+                  "startLine": 40,
+                  "startColumn": 24,
+                  "endLine": 40,
+                  "endColumn": 52
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 3
+          }
+        },
+        {
+          "ruleId": "CS0169",
+          "level": "warning",
+          "message": "从不使用字段“Views_Product_Index.__tagHelperStringValueBuffer”",
+          "suppressionStates": [
+            "suppressedInSource"
+          ],
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/GitHub/Course_SoftwareTest/TinyShop/obj/Debug/netcoreapp3.1/Razor/Views/Product/Index.cshtml.g.cs",
+                "region": {
+                  "startLine": 40,
+                  "startColumn": 24,
+                  "endLine": 40,
+                  "endColumn": 52
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 3
+          }
+        }
+      ],
+      "rules": {
+        "CS0169": {
+          "id": "CS0169",
+          "shortDescription": "字段从未使用过",
+          "defaultLevel": "warning",
+          "helpUri": "https://msdn.microsoft.com/query/roslyn.query?appId=roslyn&k=k(CS0169)",
+          "properties": {
+            "category": "Compiler",
+            "isEnabledByDefault": true,
+            "tags": [
+              "Compiler",
+              "Telemetry"
+            ]
+          }
+        },
+        "CS1998": {
+          "id": "CS1998",
+          "shortDescription": "异步方法缺少 \"await\" 运算符，将以同步方式运行",
+          "defaultLevel": "warning",
+          "helpUri": "https://msdn.microsoft.com/query/roslyn.query?appId=roslyn&k=k(CS1998)",
+          "properties": {
+            "category": "Compiler",
+            "isEnabledByDefault": true,
+            "tags": [
+              "Compiler",
+              "Telemetry"
+            ]
+          }
+        }
+      }
+    }
+  ]
+}

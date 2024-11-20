@@ -1,0 +1,115 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>用户登录</title>
+    <meta charset="UTF-8"/>
+    <!-- Import CSS -->
+    <link href="~/lib/element-ui/css/themes/default/index.css"
+          rel="stylesheet"/>
+</head>
+<body style="margin: 0;">
+<el-container class="valign-wrapper"
+              id="app"
+              ref="loginContainer"
+              style="visibility: hidden">
+    <el-main>
+        <el-row style="height: 100%;">
+            <el-col>
+                <el-card class="box-card loginCard" style="width=350px">
+                    <div class="center-align"
+                         slot="header">
+                        <span class="text-bold text-x-large">登 录</span>
+                    </div>
+                    <div>
+                        <el-form :model="userEntity"
+                                 :rules="rules"
+                                 ref="loginForm">
+                            <el-form-item :rules="rules.userNameRules"
+                                          prop="userName">
+                                <el-input :maxlength="20"
+                                          onkeypress="if (event.keyCode === 13) { loginApp.logIn(); }"
+                                          placeholder="请输入用户名"
+                                          v-model.trim="userEntity.userName">
+                                </el-input>
+                            </el-form-item>
+                            <el-form-item>
+                                <el-input :maxlength="30"
+                                          onkeypress="if (event.keyCode === 13) { loginApp.logIn(); }"
+                                          placeholder="请输入密码"
+                                          show-password
+                                          v-model.trim="userEntity.passwordPlain">
+                                </el-input>
+                            </el-form-item>
+                            <el-form-item>
+                                <span class="text-error"
+                                      style="display: block; height: 14px; line-height: 14px;">
+                                    {{message}}
+                                </span>
+                            </el-form-item>
+                            <el-form-item>
+                                <el-button :loading="loading"
+                                           icon="fa fa-user"
+                                           style="width: 100%;"
+                                           type="primary"
+                                           v-on:click="logIn">
+                                    <span class="padding-10-left">登 录</span>
+                                </el-button>
+                            </el-form-item>
+                        </el-form>
+                    </div>
+                </el-card>
+            </el-col>
+        </el-row>
+    </el-main>
+</el-container>
+<!-- import Vue before Element -->
+<script src="~/lib/vue/js/vue.js"></script>
+<!-- import JavaScript -->
+<script src="~/lib/element-ui/js/index.js"></script>
+<script src="~/lib/axios/js/axios.min.js"></script>
+
+<script>
+    const loginApp = new Vue({
+        el: '#app',
+        data: {
+            userEntity: {
+                userName: '',
+                passwordPlain: ''
+            },
+            message: '',
+            loading: false,
+            rules: {
+                userNameRules: [
+                    { required: true, message: '用户名不能为空', trigger: 'blur' }
+                ]
+            }
+        },
+        methods: {
+            logIn: function () {
+                loginApp.$refs.loginForm.validate(async (valid) => {
+                    if (valid) {
+                        loginApp.message = '';
+                        loginApp.loading = true;
+                        const response = await axios.post('/Login/SignIn', loginApp.userEntity);
+                        if (response.data.code !== "success") {
+                            loginApp.message = response.data.message;
+                            loginApp.loading = false;
+                        } else {
+                            window.location.href = "/Product/Index";
+                        }
+                    }
+                });
+            }
+        },
+        mounted() {
+            this.$refs.loginContainer.$el.style.visibility = "visible";
+        }
+    })
+</script>
+</body>
+</html>

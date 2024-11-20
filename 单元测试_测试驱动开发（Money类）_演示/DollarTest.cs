@@ -1,45 +1,37 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿#region
+
 using NUnit.Framework;
 
-namespace 单元测试_测试驱动开发_Money类__演示
-{
-	[TestFixture]
-	class DollarTest
-	{
-		[Test]
-		public void TestMultiplication()
-		{
-			Dollar five = new Dollar(5);
-			five.Times(2);
-			Assert.AreEqual(10, five.Amount);
-		}
+#endregion
 
-		[Test]
-		public void TestFloatAmount()
-		{
-			Dollar fivePointThree = new Dollar(5.3);
-			Assert.AreEqual(5.3, fivePointThree.Amount);
-		}
+namespace 单元测试_测试驱动开发_Money类__演示 {
+    [TestFixture]
+    internal class DollarTest {
+        [Test]
+        public void TestMultiplication() {
+            var five = new Dollar(5);
+            five.Times(2);
+            Assert.AreEqual(10, five.Amount);
+        }
 
+        [Test]
+        public void TestFloatAmount() {
+            var fivePointThree = new Dollar(5.3);
+            Assert.AreEqual(5.3, fivePointThree.Amount);
+        }
 
-		[Test]
-		public void TestEqualsTo()
-		{
-			Dollar five = new Dollar(5);
-			Dollar anotherFive = new Dollar(5);
+        [Test]
+        public void TestEqualsTo() {
+            var five = new Dollar(5);
+            var anotherFive = new Dollar(5);
 
-			Assert.AreEqual(true, five.EqualsTo(anotherFive));
-		}
+            Assert.AreEqual(true, five.EqualsTo(anotherFive));
+        }
 
-		[Test]
-		public void TestCurrency()
-		{
-			Dollar five = new Dollar();
-			Assert.AreEqual("USD", five.Currency);
-		}
-	}
+        [Test]
+        public void TestCurrency() {
+            var five = new Dollar();
+            Assert.AreEqual("USD", five.Currency);
+        }
+    }
 }

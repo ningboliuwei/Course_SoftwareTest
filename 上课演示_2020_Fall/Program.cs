@@ -1,14 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace 上课演示_2020_Fall
-{
-    class Program
-    {
-        static void Main(string[] args) {
+﻿namespace 上课演示_2020_Fall {
+    internal class Program {
+        private static void Main(string[] args) {
             // string number1;
             // string number2;
             //

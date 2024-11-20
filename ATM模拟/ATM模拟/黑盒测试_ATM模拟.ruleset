@@ -1,0 +1,5 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<RuleSet Name="SonarQube - TinyShop Sonar way" ToolsVersion="17.0">
+  <Include Path="..\..\.sonarlint\tinyshopcsharp.ruleset" Action="Default" />
+  <Include Path="allrules.ruleset" Action="Default" />
+</RuleSet>

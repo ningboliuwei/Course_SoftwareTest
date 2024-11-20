@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.30011.22
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35327.3
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "黑盒测试_ATM模拟", "ATM模拟\ATM模拟\黑盒测试_ATM模拟.csproj", "{18F9C272-AB07-4143-B72F-112650C4CFD1}"
 EndProject
@@ -9,7 +9,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "单元测试_NUnit", "单�
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "单元测试_两数相加", "单元测试_两数相加\单元测试_两数相加.csproj", "{181E1A31-4139-47EE-8683-3456BA0589AB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "单元测试_Caculator", "单元测试_Caculator\单元测试_Caculator.csproj", "{3737D5D8-9E12-4ED2-AF49-900F4A2EB44C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "单元测试_Calculator", "单元测试_Caculator\单元测试_Calculator.csproj", "{3737D5D8-9E12-4ED2-AF49-900F4A2EB44C}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "单元测试_寻找最大数", "单元测试_寻找最大数\单元测试_寻找最大数.csproj", "{F15B7064-2B93-48E5-868A-06CB25BFC872}"
 EndProject
@@ -37,13 +37,23 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FELottery", "FELottery\FELo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "单元测试_上课演示", "单元测试_上课演示\单元测试_上课演示.csproj", "{64AC6916-51B5-4DCD-B2BE-65120DAE8528}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "上课演示_2020_Fall", "上课演示_2020_Fall\上课演示_2020_Fall.csproj", "{0A82CE36-8270-4F74-8295-FE8F570D5681}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "上课演示_2020_FALL", "上课演示_2020_Fall\上课演示_2020_FALL.csproj", "{0A82CE36-8270-4F74-8295-FE8F570D5681}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "上课演示_2021_SPRING", "上课演示_2021_SPRING\上课演示_2021_SPRING.csproj", "{71F4D1C0-E90A-415F-BA28-654EDA76562D}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "上课演示_2021_SPRING_TEST", "上课演示_2021_SPRING_TEST\上课演示_2021_SPRING_TEST.csproj", "{58D1BB8B-A619-4A60-B365-EB3DC89E2495}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TinyShop", "TinyShop\TinyShop.csproj", "{51B3F912-36E1-41A4-A9F1-9D1B0A233484}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TinyShop", "TinyShop\TinyShop.csproj", "{51B3F912-36E1-41A4-A9F1-9D1B0A233484}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "上课演示_2021_FALL", "单元测试_上课演示_2021FALL\上课演示_2021_FALL.csproj", "{6B891275-C1D4-4AAA-8DF8-F2130BD051C1}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "单元测试_测试驱动开发（IntegerList）_演示_2022", "单元测试_测试驱动开发（IntegerList）_演示_2022\单元测试_测试驱动开发（IntegerList）_演示_2022.csproj", "{171198B2-8457-48F0-903A-1741518B6601}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "单元测试_测试驱动开发（Money类）_演示_2022", "单元测试_测试驱动开发（Money类）_演示_2022\单元测试_测试驱动开发（Money类）_演示_2022.csproj", "{45507F7E-1BA8-4CCE-B7F3-B174D1F8F462}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "上课演示_2022_FALL", "上课演示_2022_FALL\上课演示_2022_FALL.csproj", "{6637DE9E-1B91-47EE-877F-03C7E2D23C80}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "上课演示_2024_FALL", "上课演示_2024_FALL\上课演示_2024_FALL.csproj", "{5C4421E7-3635-4832-B550-327A6A5F3484}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -115,6 +125,26 @@ Global
 		{51B3F912-36E1-41A4-A9F1-9D1B0A233484}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{51B3F912-36E1-41A4-A9F1-9D1B0A233484}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{51B3F912-36E1-41A4-A9F1-9D1B0A233484}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6B891275-C1D4-4AAA-8DF8-F2130BD051C1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6B891275-C1D4-4AAA-8DF8-F2130BD051C1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6B891275-C1D4-4AAA-8DF8-F2130BD051C1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6B891275-C1D4-4AAA-8DF8-F2130BD051C1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{171198B2-8457-48F0-903A-1741518B6601}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{171198B2-8457-48F0-903A-1741518B6601}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{171198B2-8457-48F0-903A-1741518B6601}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{171198B2-8457-48F0-903A-1741518B6601}.Release|Any CPU.Build.0 = Release|Any CPU
+		{45507F7E-1BA8-4CCE-B7F3-B174D1F8F462}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{45507F7E-1BA8-4CCE-B7F3-B174D1F8F462}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{45507F7E-1BA8-4CCE-B7F3-B174D1F8F462}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{45507F7E-1BA8-4CCE-B7F3-B174D1F8F462}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6637DE9E-1B91-47EE-877F-03C7E2D23C80}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6637DE9E-1B91-47EE-877F-03C7E2D23C80}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6637DE9E-1B91-47EE-877F-03C7E2D23C80}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6637DE9E-1B91-47EE-877F-03C7E2D23C80}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5C4421E7-3635-4832-B550-327A6A5F3484}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5C4421E7-3635-4832-B550-327A6A5F3484}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5C4421E7-3635-4832-B550-327A6A5F3484}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5C4421E7-3635-4832-B550-327A6A5F3484}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -131,8 +161,14 @@ Global
 		{B690C0D1-F32C-4216-8C37-D72A420F5C36} = {A8A55CB9-9269-42AE-8B70-804D6841D037}
 		{446BEADC-25C1-4AD8-9928-690B32FEC73A} = {68B7DCEA-AF66-434C-8305-9FDFFE7DC7CE}
 		{EB9CF3DF-28D0-4D71-A2D2-F2EC9E1C55D3} = {6E797475-50EE-4222-B4DC-92DD966F84CE}
+		{64AC6916-51B5-4DCD-B2BE-65120DAE8528} = {F56C86BB-F894-4A7A-BA1B-EE60CADA1C92}
 		{0A82CE36-8270-4F74-8295-FE8F570D5681} = {F56C86BB-F894-4A7A-BA1B-EE60CADA1C92}
 		{71F4D1C0-E90A-415F-BA28-654EDA76562D} = {F56C86BB-F894-4A7A-BA1B-EE60CADA1C92}
+		{58D1BB8B-A619-4A60-B365-EB3DC89E2495} = {F56C86BB-F894-4A7A-BA1B-EE60CADA1C92}
+		{6B891275-C1D4-4AAA-8DF8-F2130BD051C1} = {F56C86BB-F894-4A7A-BA1B-EE60CADA1C92}
+		{171198B2-8457-48F0-903A-1741518B6601} = {F56C86BB-F894-4A7A-BA1B-EE60CADA1C92}
+		{45507F7E-1BA8-4CCE-B7F3-B174D1F8F462} = {F56C86BB-F894-4A7A-BA1B-EE60CADA1C92}
+		{6637DE9E-1B91-47EE-877F-03C7E2D23C80} = {F56C86BB-F894-4A7A-BA1B-EE60CADA1C92}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {6AE4A967-C936-44B7-9C19-2D748AE696EB}

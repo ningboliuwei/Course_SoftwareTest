@@ -15,6 +15,34 @@
 <body style="margin: 0;">
 <el-container id="app">
     <el-main>
+        <el-row class="padding-10"
+                ref="header"
+                style="height: 50px;"
+                type="flex">
+            <el-col></el-col>
+            <el-col>
+                <template v-if="isLoggedIn">
+                    <!-- 如果用户已登录 -->
+                    <el-dropdown style="float: right;" v-on:command="accountDropDownCommand">
+                        <span class="padding-10-x text-base"
+                              style="display: block; float: right; line-height: 29px; vertical-align: middle;">
+                            你好，{{ userName }}
+                        </span>
+                        <el-avatar shape="square"
+                                   size="small"
+                                   src="https://cube.elemecdn.com/3/7c/3ea6beec64369c2642b92c6726f1epng.png">
+                        </el-avatar>
+                        <el-dropdown-menu slot="dropdown">
+                            <el-dropdown-item command="logOut">退出</el-dropdown-item>
+                        </el-dropdown-menu>
+                    </el-dropdown>
+                </template>
+                <template v-else>
+                    <!-- 如果用户未登录 -->
+                    <el-button type="text" v-on:click="redirectToLogin" style="float: right;">登录</el-button>
+                </template>
+            </el-col>
+        </el-row>
         <el-row>
             <el-col>
                 <el-menu :default-active="'全部'"
@@ -105,7 +133,9 @@
             products: [],
             keyword: '',
             order: 'asc',
-            categories: ['全部', '电器', '数码', '食品']
+            categories: ['全部', '电器', '数码', '食品'],
+            userName: '',
+            isLoggedIn: false
         },
         methods: {
             async GetAllProducts(order) {
@@ -129,16 +159,16 @@
             },
             onDeleteButtonClick(id) {
                 this.$confirm('确认删除该产品吗？',
-                        '提示',
-                        {
-                            confirmButtonText: '确定',
-                            cancelButtonText: '取消',
-                            type: 'warning'
-                        })
+                '提示',
+                {
+                    confirmButtonText: '确定',
+                    cancelButtonText: '取消',
+                    type: 'warning'
+                })
                     .then(async () => {
                         await this.deleteProduct(id);
                     })
-                    .catch(() => {});;
+                    .catch(()  => { });;
             },
             async deleteProduct(id) {
                 let response = await axios.get('/Product/Delete/', { params: { id: id } });
@@ -181,6 +211,15 @@
 
                 this.GetAllProducts(this.order);
             },
+            async accountDropDownCommand(command) {
+                if (command === "logOut") {
+                    const response = await axios.post('/Login/SignOut');
+                    
+                    if (response.data.code === "success") {
+                         window.location.reload();
+                    }
+                } 
+            },
             async GetAllProductsByCategory(category) {
                 // 获取所有产品数据
                 let response = await axios.get('/Product/GetProductsByCategory', { params: { category: category } });
@@ -195,12 +234,26 @@
                 } else {
                     this.GetAllProductsByCategory(index);
                 }
-            }
+            },
+            redirectToLogin() {
+                window.location.href = '/Login/Index'; // 跳转到登录页
+            }, 
+           async checkUserLoginStatus() {
+                let response = await axios.get('/Login/CheckLoginStatus');
+         
+                if (response.data.code === 'success') {
+                    this.isLoggedIn = true;
+                    this.userName = response.data.data.userName;
+                } else {
+                    this.isLoggedIn = false;
+                }   
+            },
         },
         mounted() {
             this.GetAllProducts(this.order);
+            this.checkUserLoginStatus();
         }
     });
-</script>
+    </script>
 </body>
 </html>

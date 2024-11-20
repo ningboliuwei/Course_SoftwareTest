@@ -1,13 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace 单元测试_测试驱动开发_Money类__演示
-{
-    class Money
-    {
+﻿namespace 单元测试_测试驱动开发_Money类__演示 {
+    internal class Money {
         protected double m_amount;
 
         protected string m_currency;
@@ -23,18 +15,18 @@ namespace 单元测试_测试驱动开发_Money类__演示
             get { return m_amount; }
         }
 
-        public void Times(int multiplier) {
-            m_amount = m_amount * multiplier;
+        public string Currency {
+            get { return m_currency; }
         }
 
         public bool EqualsTo(Money money) {
-            Bank bank = new Bank();
+            var bank = new Bank();
             // return this.Amount * bank.GetRate() == money.Amount;
             return true;
         }
 
-        public string Currency {
-            get { return m_currency; }
+        public void Times(int multiplier) {
+            m_amount = m_amount * multiplier;
         }
     }
 }

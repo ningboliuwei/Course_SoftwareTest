@@ -1,0 +1,181 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>添加产品</title>
+    <meta charset="UTF-8"/>
+    <!-- import CSS -->
+    <link href="~/lib/element-ui/css/themes/default/index.css"
+          rel="stylesheet"/>
+</head>
+<body style="margin: 0;">
+<el-container id="app">
+    <el-main>
+        <el-row>
+            <el-col>
+                <el-form :model="product"
+                         :rules="rules"
+                         label-width="auto"
+                         ref="form">
+                    <el-row>
+                        <el-col>
+                            <el-form-item :rules="rules.productNumberRules"
+                                          label="产品序号"
+                                          prop="productNumber">
+                                <el-input placeholder="请输入产品序号"
+                                          v-model="product.productNumber">
+                                </el-input>
+                            </el-form-item>
+                        </el-col>
+                    </el-row>
+                    <el-row>
+                        <el-col>
+                            <el-form-item :rules="rules.productNameRules"
+                                          label="产品名称"
+                                          prop="productName">
+                                <el-input placeholder="请输入产品名称"
+                                          v-model="product.productName">
+                                </el-input>
+                            </el-form-item>
+                        </el-col>
+                    </el-row>
+                    <el-row>
+                        <el-col>
+                            <el-form-item label="产品类型">
+                                <el-radio-group v-model="product.productType">
+                                    <el-radio label="电器"></el-radio>
+                                    <el-radio label="数码"></el-radio>
+                                    <el-radio label="食品"></el-radio>
+                                </el-radio-group>
+                            </el-form-item>
+                        </el-col>
+                    </el-row>
+                    <el-row>
+                        <el-col>
+                            <el-form-item :rules="rules.priceRules"
+                                          label="价格"
+                                          prop="price">
+                                <el-input placeholder="请输入价格"
+                                          v-model="product.price">
+                                </el-input>
+                            </el-form-item>
+                        </el-col>
+                    </el-row>
+                    <el-row>
+                        <el-col>
+                            <el-form-item label="上传图片">
+                                <el-upload :on-success="onPictureUploadSuccess"
+                                           :show-file-list="false"
+                                           action="/Product/UploadImage">
+                                    <el-button>
+                                        选择文件
+                                    </el-button>
+                                </el-upload>
+                                <el-image :src="'/upload/' + product.imgUrl"
+                                          fit="contain"
+                                          style="height: 300px;">
+                                    <div slot="error">
+                                        <i class="el-icon-picture-outline"></i>
+                                    </div>
+                                </el-image>
+                            </el-form-item>
+                        </el-col>
+                    </el-row>
+                    <el-row>
+                        <el-col style="text-align: center;">
+                            <el-form-item>
+                                <el-button type="primary"
+                                           v-on:click="onAddButtonClick">
+                                    添加
+                                </el-button>
+                                <el-button v-on:click="onBackButtonClick">返回</el-button>
+                            </el-form-item>
+                        </el-col>
+                    </el-row>
+                </el-form>
+            </el-col>
+        </el-row>
+    </el-main>
+</el-container>
+<!-- import Vue before Element -->
+<script src="~/lib/vue/js/vue.js"></script>
+<!-- import JavaScript -->
+<script src="~/lib/element-ui/js/index.js"></script>
+<script src="~/lib/axios/js/axios.min.js"></script>
+<script>
+    const app = new Vue({
+        el: "#app",
+        data: {
+            product: {
+                productNumber: '',
+                productName: '',
+                productType: '电器',
+                price: '',
+                imgUrl: ''
+            },
+            rules: {
+                productNumberRules: [
+                    { required: true, message: '请输入产品序号', trigger: 'blur' }
+                ],
+                productNameRules: [
+                    { required: true, message: '请输入产品名称', trigger: 'blur' }
+                ],
+                priceRules: [
+                    { required: true, message: '请输入产品价格', trigger: 'blur' },
+                    // 自定义校验
+                    {
+                        validator: (rule, value, callback) => {
+                            if (value <= 0) {
+                                callback(new Error('价格必须大于 0'));
+                            } else {
+                                callback();
+                            }
+                        }
+                    }
+                ]
+            }
+        },
+        methods: {
+            async onAddButtonClick() {
+                this.$refs['form'].validate(async(valid) => {
+                    if (valid) {
+                        const response = await axios.post('/Product/Create', this.product);
+
+                        if (response.data.code === 'success') {
+                            this.$message({
+                                message: '记录插入成功',
+                                type: 'success'
+                            });
+
+                            this.onBackButtonClick();
+                        } else {
+                            this.$message({
+                                message: '记录插入失败',
+                                type: 'error'
+                            });
+                        }
+
+                        return true;
+                    } else {
+                        return false;
+                    }
+                });
+            },
+            onBackButtonClick() {
+                window.location.href = "/Product/Index";
+            },
+            onPictureUploadSuccess: function(response, file, fileList) {
+                if (response.code === "success") {
+                    this.product.imgUrl = response.data;
+                } else {
+                    this.$message({
+                        message: '图片上传失败',
+                        type: 'error'
+                    });
+                }
+            }
+        }
+    });
+</script>
+</body>
+
+</html>

@@ -1,0 +1,10 @@
+l
+aC:\GitHub\Course_SoftwareTest\TinyShop\obj\Debug\netcoreapp3.1\Razor\Views\Home\Index.cshtml.g.csutf-8n
+cC:\GitHub\Course_SoftwareTest\TinyShop\obj\Debug\netcoreapp3.1\Razor\Views\Product\Edit.cshtml.g.csutf-8p
+eC:\GitHub\Course_SoftwareTest\TinyShop\obj\Debug\netcoreapp3.1\Razor\Views\Product\Create.cshtml.g.csutf-8o
+dC:\GitHub\Course_SoftwareTest\TinyShop\obj\Debug\netcoreapp3.1\Razor\Views\Product\Table.cshtml.g.csutf-8o
+dC:\GitHub\Course_SoftwareTest\TinyShop\obj\Debug\netcoreapp3.1\Razor\Views\Product\Index.cshtml.g.csutf-8p
+eC:\GitHub\Course_SoftwareTest\TinyShop\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_Layout.cshtml.g.csutf-8n
+cC:\GitHub\Course_SoftwareTest\TinyShop\obj\Debug\netcoreapp3.1\Razor\Views\_ViewImports.cshtml.g.csutf-8l
+aC:\GitHub\Course_SoftwareTest\TinyShop\obj\Debug\netcoreapp3.1\Razor\Views\_ViewStart.cshtml.g.csutf-8m
+bC:\GitHub\Course_SoftwareTest\TinyShop\obj\Debug\netcoreapp3.1\TinyShop.RazorTargetAssemblyInfo.csutf-8

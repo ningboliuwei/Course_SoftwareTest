@@ -1,24 +1,19 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿#region
 
-namespace 单元测试_两数相加
-{
-    class Program
-    {
-      
-        static void Main(string[] args)
-        {
-            int x = 3;
-            int y = 4;
+using System;
 
-            Caculate caculate = new Caculate();
+#endregion
 
-            Console.Write(caculate.AddTwoNumbers(x,y));
+namespace 单元测试_两数相加 {
+    internal class Program {
+        private static void Main(string[] args) {
+            var x = 3;
+            var y = 4;
+
+            var caculate = new Calculate();
+
+            Console.Write(caculate.AddTwoNumbers(x, y));
             Console.ReadLine();
         }
-
-      
     }
 }

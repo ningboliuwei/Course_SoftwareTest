@@ -1,53 +1,44 @@
-﻿using System;
-using System.Collections.Generic;
+﻿#region
+
 using System.Data;
 using System.Data.SqlClient;
-using System.Linq;
-using System.Text;
 
-namespace 单元测试_数据库连接
-{
-	internal class DBHelper
-	{
-		public static object ExecuteScalar(SqlConnection connection, string cmdText)
-		{
-			SqlCommand cmd = new SqlCommand(cmdText, connection);
+#endregion
 
-			using (connection)
-			{
-				object val = cmd.ExecuteScalar();
+namespace 单元测试_数据库连接 {
+    internal class DBHelper {
+        public static int ExecuteNonQuery(SqlConnection connection, string cmdText) {
+            var cmd = new SqlCommand(cmdText, connection);
 
-				return val;
-			}
-		}
+            using (connection) {
+                var val = cmd.ExecuteNonQuery();
 
-		public static int ExecuteNonQuery(SqlConnection connection, string cmdText)
-		{
-			SqlCommand cmd = new SqlCommand(cmdText, connection);
+                return val;
+            }
+        }
 
-			using (connection)
-			{
-				int val = cmd.ExecuteNonQuery();
+        public static SqlDataReader ExecuteReader(SqlConnection connection, string cmdText) {
+            var cmd = new SqlCommand(cmdText, connection);
 
-				return val;
-			}
-		}
+            try {
+                var rdr = cmd.ExecuteReader(CommandBehavior.CloseConnection);
+                cmd.Parameters.Clear();
+                return rdr;
+            }
+            catch {
+                connection.Close();
+                throw;
+            }
+        }
 
-		public static SqlDataReader ExecuteReader(SqlConnection connection, string cmdText)
-		{
-			SqlCommand cmd = new SqlCommand(cmdText, connection);
+        public static object ExecuteScalar(SqlConnection connection, string cmdText) {
+            var cmd = new SqlCommand(cmdText, connection);
 
-			try
-			{
-				SqlDataReader rdr = cmd.ExecuteReader(CommandBehavior.CloseConnection);
-				cmd.Parameters.Clear();
-				return rdr;
-			}
-			catch
-			{
-				connection.Close();
-				throw;
-			}
-		}
-	}
+            using (connection) {
+                var val = cmd.ExecuteScalar();
+
+                return val;
+            }
+        }
+    }
 }

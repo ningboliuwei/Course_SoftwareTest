@@ -1,21 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿#region
 
-namespace 上课演示_2020_Fall
-{
-    public class Calculator
-    {
+using System;
+
+#endregion
+
+namespace 上课演示_2020_Fall {
+    public class Calculator {
         public int Add(int x, int y) {
             var result = x + y;
-
-            return result;
-        }
-
-        public int Sub(int x, int y) {
-            var result = x - y;
 
             return result;
         }
@@ -26,6 +18,12 @@ namespace 上课演示_2020_Fall
             }
 
             return x / y;
+        }
+
+        public int Sub(int x, int y) {
+            var result = x - y;
+
+            return result;
         }
     }
 }
